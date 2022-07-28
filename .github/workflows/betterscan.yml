@@ -1,16 +1,20 @@
-on:
-  pull_request:
+name: Betterscan Scan
+on: 
+ pull_request:
     types:
       - opened
     branches:    
       - 'main'
-
 jobs:
-  betterscan_job:
-   runs-on: ubuntu-latest
-   name: Betterscan scan job
-   steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
-    - uses: topcodersonline/betterscan-custom@v3
+  Betterscan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Betterscan Scan
+        uses: topcodersonline/betterscan-custom@v3
+      - name: Upload the SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: report.sarif
