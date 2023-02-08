@@ -1,0 +1,9 @@
+[
+    {
+        "hash": "8e40a213417f2767f2106e41fe6be9e4",
+        "description": "Ensure top-level permissions are not set to write-all",
+        "severity": "Warning",
+        "file": ".github/workflows/betterscan.yml",
+        "line": 1
+    }
+]
