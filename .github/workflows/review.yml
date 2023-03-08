@@ -17,6 +17,9 @@ jobs:
          branch: ${{ github.head_ref || github.ref_name }}
 
   upload:
+
+    runs-on: ubuntu-latest
+    steps     
       - uses: "finnp/create-file-action@master"
         env:
           FILE_NAME: "to-rdjson.jq"
