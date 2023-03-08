@@ -26,4 +26,4 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cat report.json| jq -f to-rdjson.jq | /bin/reviewdog -f=rdjson -reporter=github-check
+          cat report.json| jq -f to-rdjson.jq | reviewdog -f=rdjson -reporter=github-check
