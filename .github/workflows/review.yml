@@ -19,7 +19,7 @@ jobs:
   upload:
 
     runs-on: ubuntu-latest
-    steps     
+    steps:    
       - uses: "finnp/create-file-action@master"
         env:
           FILE_NAME: "to-rdjson.jq"
